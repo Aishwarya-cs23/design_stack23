@@ -7,9 +7,10 @@
     <title>DESIGN_STACK23 | Web & Design Studio</title>
 
     <meta name="description"
-          content="DESIGN_STACK23 - Web design, web development, UI/UX and graphic design.">
+        content="DESIGN_STACK23 - Modern websites, UI/UX, web development and creative digital solutions for businesses and brands.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -22,8 +23,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #080810;
-            color: white;
+            background: #08080d;
+            color: #ffffff;
             line-height: 1.6;
         }
 
@@ -32,19 +33,25 @@
             color: inherit;
         }
 
-        /* NAVBAR */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             padding: 18px 7%;
-            background: rgba(8, 8, 16, 0.92);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid #242433;
+
+            background: rgba(8, 8, 13, 0.90);
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid #252530;
         }
 
         .logo-text {
@@ -60,277 +67,553 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 28px;
+            gap: 30px;
         }
 
         nav ul a {
-            color: #c9c9d2;
+            color: #b9b9c5;
             font-size: 14px;
             transition: 0.3s;
         }
 
         nav ul a:hover {
-            color: white;
+            color: #ffffff;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            min-height: 90vh;
+            min-height: 92vh;
+
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+
             text-align: center;
-            padding: 80px 7%;
+
+            padding: 38px 7%;
+
             background:
-                radial-gradient(circle at 50% 20%, #351044 0%, #12101f 30%, #080810 65%);
+                radial-gradient(
+                    circle at 50% 15%,
+                    #3b124c 0%,
+                    #171221 30%,
+                    #08080d 68%
+                );
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
         }
 
         .tag {
             display: inline-block;
-            padding: 8px 15px;
-            border: 1px solid #693477;
-            border-radius: 30px;
-            color: #e38cff;
+
+            padding: 9px 17px;
+
+            border: 1px solid #673878;
+            border-radius: 50px;
+
+            color: #e394ff;
+
             font-size: 12px;
             letter-spacing: 2px;
-            margin-bottom: 22px;
-        }
 
-        .hero h1 {
-            font-size: clamp(45px, 8vw, 90px);
-            line-height: 1;
             margin-bottom: 25px;
         }
 
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 92px);
+            line-height: 0.98;
+
+            margin-bottom: 28px;
+        }
+
         .gradient-text {
-            background: linear-gradient(90deg, #a76cff, #ed70d8, #ffb071);
+            background:
+                linear-gradient(
+                    90deg,
+                    #a66cff,
+                    #ed70d8,
+                    #ffb071
+                );
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero p {
-            max-width: 650px;
+            max-width: 680px;
+
             margin: auto;
-            color: #a9a9b7;
+
+            color: #aaaab8;
+
             font-size: 18px;
         }
 
         .buttons {
-            margin-top: 35px;
+            margin-top: 38px;
+
             display: flex;
             justify-content: center;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 14px 24px;
+            display: inline-block;
+
+            padding: 14px 25px;
+
             border-radius: 10px;
+
             font-weight: bold;
+
             transition: 0.3s;
         }
 
         .primary {
-            background: white;
+            background: #ffffff;
             color: #09090f;
         }
 
         .primary:hover {
             transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.12);
         }
 
         .secondary {
-            border: 1px solid #555568;
-            color: white;
+            border: 1px solid #555565;
+            color: #ffffff;
         }
 
         .secondary:hover {
-            background: #1a1a27;
+            background: #1b1b26;
+            transform: translateY(-3px);
         }
 
-        /* SECTIONS */
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
-            padding: 100px 7%;
+            padding: 45px 7%;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 55px;
+            margin-bottom: 60px;
         }
 
         .section-title small {
             color: #d777ed;
+
             letter-spacing: 2px;
+
             font-weight: bold;
+
+            font-size: 12px;
         }
 
         .section-title h2 {
-            font-size: clamp(35px, 5vw, 55px);
+            font-size: clamp(38px, 5vw, 58px);
+
             margin-top: 8px;
         }
 
         .section-title p {
             color: #9696a5;
-            max-width: 600px;
-            margin: 10px auto;
+
+            max-width: 650px;
+
+            margin: 12px auto 0;
         }
 
-        /* WORK */
+
+        /* =========================
+           WORK SECTION
+        ========================= */
+
+        .work-section {
+            background: #08080d;
+        }
 
         .work-grid {
-            max-width: 1100px;
+            max-width: 1150px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 25px;
         }
 
         .project {
-            background: #11111b;
-            border: 1px solid #252535;
+            background: #111119;
+
+            border: 1px solid #272733;
+
             border-radius: 18px;
+
             overflow: hidden;
-            transition: 0.3s;
+
+            transition: 0.35s;
         }
 
         .project:hover {
-            transform: translateY(-7px);
-            border-color: #814c91;
+            transform: translateY(-8px);
+
+            border-color: #8b4d9d;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.35);
         }
 
         .project-image {
-            height: 210px;
+            height: 220px;
+
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #191426, #32133c);
-            color: #c5c5d0;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #191426,
+                    #35133d
+                );
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(213, 100, 255, 0.25),
+                    transparent 70%
+                );
+
+            top: -60px;
+            right: -40px;
+        }
+
+        .project-image span {
+            position: relative;
+            z-index: 2;
+
+            color: #e4d8e8;
+
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
             font-weight: bold;
-            letter-spacing: 2px;
         }
 
         .project-info {
-            padding: 22px;
+            padding: 25px;
+        }
+
+        .project-number {
+            color: #d66cff;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
         }
 
         .project-info h3 {
-            margin-bottom: 7px;
+            font-size: 23px;
+
+            margin: 8px 0;
         }
 
         .project-info p {
             color: #9696a5;
+
             font-size: 14px;
-            margin-bottom: 18px;
+
+            margin-bottom: 22px;
         }
 
         .project-link {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
             color: #e27bf0;
+
             font-size: 14px;
+
             font-weight: bold;
+
+            transition: 0.3s;
         }
 
-        /* SERVICES */
+        .project-link:hover {
+            color: #ffffff;
+
+            gap: 11px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
 
         .services {
             background: #0e0e17;
+
+            border-top: 1px solid #171720;
+            border-bottom: 1px solid #171720;
         }
 
         .service-grid {
-            max-width: 1100px;
+            max-width: 1150px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
+
             gap: 20px;
         }
 
         .service {
-            padding: 28px;
+            padding: 30px;
+
             background: #13131e;
-            border: 1px solid #272737;
+
+            border: 1px solid #282837;
+
             border-radius: 16px;
+
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+
+            border-color: #754684;
         }
 
         .service-number {
             color: #d36ce8;
+
             font-size: 13px;
+
             font-weight: bold;
+
+            letter-spacing: 1px;
         }
 
         .service h3 {
-            margin: 15px 0 8px;
+            margin: 16px 0 8px;
+
+            font-size: 19px;
         }
 
         .service p {
             color: #9696a5;
+
             font-size: 14px;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
-            max-width: 1000px;
+            max-width: 1050px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+
+            gap: 70px;
+
             align-items: center;
         }
 
+        .about small {
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            font-weight: bold;
+        }
+
         .about h2 {
-            font-size: 45px;
-            line-height: 1.1;
+            font-size: clamp(40px, 5vw, 58px);
+
+            line-height: 1.05;
+
+            margin-top: 10px;
         }
 
         .about p {
             color: #a4a4b2;
+
             font-size: 17px;
+
+            margin-bottom: 20px;
         }
 
-        /* CONTACT */
+        .about-box {
+            padding: 30px;
+
+            border: 1px solid #282837;
+
+            background: #101019;
+
+            border-radius: 18px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             text-align: center;
+
             background:
-                radial-gradient(circle at center, #2b1036, #080810 65%);
+                radial-gradient(
+                    circle at center,
+                    #2d1038,
+                    #08080d 65%
+                );
+        }
+
+        .contact small {
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            font-weight: bold;
         }
 
         .contact h2 {
-            font-size: clamp(38px, 6vw, 65px);
-            margin: 12px 0;
+            font-size: clamp(40px, 6vw, 68px);
+
+            line-height: 1;
+
+            margin: 15px 0 20px;
         }
 
         .contact p {
             color: #a4a4b2;
-            margin-bottom: 30px;
+
+            margin-bottom: 32px;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             padding: 30px 7%;
-            border-top: 1px solid #242433;
+
+            border-top: 1px solid #252530;
+
             display: flex;
+
             justify-content: space-between;
+
+            align-items: center;
+
             color: #777786;
+
             font-size: 13px;
         }
 
         footer a {
             color: #d779eb;
+
+            transition: 0.3s;
         }
 
-        /* MOBILE */
+        footer a:hover {
+            color: #ffffff;
+        }
 
-        @media (max-width: 850px) {
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            nav {
+                padding: 17px 6%;
+            }
 
             nav ul {
                 display: none;
+            }
+
+            section {
+                padding: 80px 6%;
+            }
+
+            .hero {
+                min-height: 85vh;
+
+                padding: 80px 6%;
+            }
+
+            .hero p {
+                font-size: 16px;
             }
 
             .work-grid {
@@ -338,41 +621,36 @@
             }
 
             .service-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .about {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            section {
-                padding: 75px 6%;
-            }
-
-            .service-grid {
                 grid-template-columns: 1fr;
             }
 
-            .hero {
-                min-height: 85vh;
+            .project-image {
+                height: 200px;
+            }
+
+            .about h2 {
+                font-size: 42px;
             }
 
             footer {
                 flex-direction: column;
+
                 gap: 10px;
+
                 text-align: center;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
 
@@ -381,16 +659,32 @@
         </a>
 
         <ul>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#work">Work</a>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
 
     </nav>
 
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero" id="home">
 
@@ -401,16 +695,21 @@
             </div>
 
             <h1>
+
                 We create
+
                 <span class="gradient-text">
                     digital experiences.
                 </span>
+
             </h1>
 
             <p>
+
                 DESIGN_STACK23 is a creative digital studio
-                creating modern websites, UI/UX designs and
-                visual experiences for businesses and brands.
+                creating modern, responsive and professional
+                websites for businesses, creators and brands.
+
             </p>
 
             <div class="buttons">
@@ -430,19 +729,26 @@
     </section>
 
 
-    <!-- WORK -->
 
-    <section id="work">
+    <!-- =========================
+         WORK
+    ========================= -->
+
+    <section id="work" class="work-section">
 
         <div class="section-title">
 
-            <small>OUR PORTFOLIO</small>
+            <small>
+                OUR PORTFOLIO
+            </small>
 
-            <h2>Selected Work</h2>
+            <h2>
+                Selected Work
+            </h2>
 
             <p>
-                A selection of websites and creative projects
-                created by DESIGN_STACK23.
+                Explore some of the single-page websites
+                designed and developed by DESIGN_STACK23.
             </p>
 
         </div>
@@ -451,27 +757,41 @@
         <div class="work-grid">
 
 
-            <!-- PROJECT 1 -->
+            <!-- PROJECT 01 -->
 
             <div class="project">
 
                 <div class="project-image">
-                    PROJECT 01
+
+                    <span>
+                        PROJECT 01
+                    </span>
+
                 </div>
 
                 <div class="project-info">
 
-                    <h3>Business Website</h3>
+                    <span class="project-number">
+                        01 / WEBSITE
+                    </span>
+
+                    <h3>
+                        Restaurant Website
+                    </h3>
 
                     <p>
-                        A modern responsive website designed
-                        for a growing business.
+                        A modern single-page restaurant website
+                        designed to showcase the restaurant,
+                        menu, services and customer experience.
                     </p>
 
-                    <!-- CHANGE THIS LINK -->
-
-                    <a href="#" class="project-link">
-                        View Project →
+                    <a
+                        href="https://aishwarya-cs23.github.io/restaurant-website/restaurant.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View Live Website →
                     </a>
 
                 </div>
@@ -479,27 +799,42 @@
             </div>
 
 
-            <!-- PROJECT 2 -->
+
+            <!-- PROJECT 02 -->
 
             <div class="project">
 
                 <div class="project-image">
-                    PROJECT 02
+
+                    <span>
+                        PROJECT 02
+                    </span>
+
                 </div>
 
                 <div class="project-info">
 
-                    <h3>UI/UX Design</h3>
+                    <span class="project-number">
+                        02 / WEBSITE
+                    </span>
+
+                    <h3>
+                        Dental Website
+                    </h3>
 
                     <p>
-                        Clean and user-friendly interface
-                        design focused on great experiences.
+                        A professional single-page dental website
+                        created to present dental services,
+                        treatments and clinic information.
                     </p>
 
-                    <!-- CHANGE THIS LINK -->
-
-                    <a href="#" class="project-link">
-                        View Project →
+                    <a
+                        href="https://aishwarya-cs23.github.io/dental-website/dental.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View Live Website →
                     </a>
 
                 </div>
@@ -507,27 +842,128 @@
             </div>
 
 
-            <!-- PROJECT 3 -->
+
+            <!-- PROJECT 03 -->
 
             <div class="project">
 
                 <div class="project-image">
-                    PROJECT 03
+
+                    <span>
+                        PROJECT 03
+                    </span>
+
                 </div>
 
                 <div class="project-info">
 
-                    <h3>Creative Website</h3>
+                    <span class="project-number">
+                        03 / WEBSITE
+                    </span>
+
+                    <h3>
+                        Salon Website
+                    </h3>
 
                     <p>
-                        A visually engaging website combining
-                        design and modern development.
+                        A stylish single-page salon website
+                        designed to showcase beauty services,
+                        treatments and salon information.
                     </p>
 
-                    <!-- CHANGE THIS LINK -->
+                    <a
+                        href="https://aishwarya-cs23.github.io/salon-website/Salon.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View Live Website →
+                    </a>
 
-                    <a href="#" class="project-link">
-                        View Project →
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 04 -->
+
+            <div class="project">
+
+                <div class="project-image">
+
+                    <span>
+                        PROJECT 04
+                    </span>
+
+                </div>
+
+                <div class="project-info">
+
+                    <span class="project-number">
+                        04 / WEBSITE
+                    </span>
+
+                    <h3>
+                        Home Kitchen Website
+                    </h3>
+
+                    <p>
+                        A warm and modern single-page website
+                        created for a homemade food and home
+                        kitchen business.
+                    </p>
+
+                    <a
+                        href="https://aishwarya-cs23.github.io/home-kitchen-website/homekitchen.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View Live Website →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 05 -->
+
+            <div class="project">
+
+                <div class="project-image">
+
+                    <span>
+                        PROJECT 05
+                    </span>
+
+                </div>
+
+                <div class="project-info">
+
+                    <span class="project-number">
+                        05 / WEBSITE
+                    </span>
+
+                    <h3>
+                        Gym Website
+                    </h3>
+
+                    <p>
+                        A modern fitness website designed to
+                        showcase gym programs, trainers,
+                        memberships and fitness services.
+                    </p>
+
+                    <a
+                        href="https://aishwarya-cs23.github.io/gym-website/gym.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View Live Website →
                     </a>
 
                 </div>
@@ -540,19 +976,26 @@
     </section>
 
 
-    <!-- SERVICES -->
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
 
     <section class="services" id="services">
 
         <div class="section-title">
 
-            <small>WHAT WE DO</small>
+            <small>
+                WHAT WE DO
+            </small>
 
-            <h2>Our Services</h2>
+            <h2>
+                Our Services
+            </h2>
 
             <p>
                 Digital solutions designed to help businesses
-                create a strong online presence.
+                create a professional and memorable online presence.
             </p>
 
         </div>
@@ -567,14 +1010,17 @@
                     01
                 </span>
 
-                <h3>Web Design</h3>
+                <h3>
+                    Web Design
+                </h3>
 
                 <p>
-                    Modern and attractive website designs
-                    for businesses and brands.
+                    Modern and visually attractive website
+                    designs tailored to businesses and brands.
                 </p>
 
             </div>
+
 
 
             <div class="service">
@@ -583,14 +1029,17 @@
                     02
                 </span>
 
-                <h3>Web Development</h3>
+                <h3>
+                    Web Development
+                </h3>
 
                 <p>
-                    Responsive and functional websites
-                    built for different business needs.
+                    Responsive and functional websites built
+                    for different business requirements.
                 </p>
 
             </div>
+
 
 
             <div class="service">
@@ -599,14 +1048,17 @@
                     03
                 </span>
 
-                <h3>UI/UX Design</h3>
+                <h3>
+                    UI/UX Design
+                </h3>
 
                 <p>
-                    Simple, intuitive and user-friendly
-                    digital interfaces.
+                    Clean and intuitive interfaces focused
+                    on usability and user experience.
                 </p>
 
             </div>
+
 
 
             <div class="service">
@@ -615,11 +1067,13 @@
                     04
                 </span>
 
-                <h3>Graphic Design</h3>
+                <h3>
+                    Graphic Design
+                </h3>
 
                 <p>
-                    Social media graphics, promotional
-                    designs and digital branding.
+                    Social media graphics, promotional designs
+                    and digital branding materials.
                 </p>
 
             </div>
@@ -630,11 +1084,15 @@
     </section>
 
 
-    <!-- ABOUT -->
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
     <section id="about">
 
         <div class="about">
+
 
             <div>
 
@@ -650,30 +1108,34 @@
             </div>
 
 
-            <div>
+            <div class="about-box">
 
                 <p>
                     DESIGN_STACK23 is a creative digital studio
-                    focused on web design, development, UI/UX
-                    and graphic design.
+                    focused on creating modern websites,
+                    responsive web experiences, UI/UX designs
+                    and digital graphics.
                 </p>
-
-                <br>
 
                 <p>
                     We help businesses, creators and brands
-                    build a professional and memorable
-                    online presence.
+                    establish a professional online presence
+                    through clean design and functional
+                    digital solutions.
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- CONTACT -->
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
     <section class="contact" id="contact">
 
@@ -687,15 +1149,13 @@
 
         <p>
             Have an idea for a website or design project?
-            Let's talk.
+            Let's turn it into reality.
         </p>
-
-
-        <!-- CHANGE INSTAGRAM USERNAME IF NEEDED -->
 
         <a
             href="https://www.instagram.com/design_stack23/"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn primary"
         >
             DM Us on Instagram
@@ -704,7 +1164,10 @@
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -715,11 +1178,12 @@
         <a
             href="https://www.instagram.com/design_stack23/"
             target="_blank"
+            rel="noopener noreferrer"
         >
             @design_stack23
         </a>
 
     </footer>
 
+
 </body>
-</html>
